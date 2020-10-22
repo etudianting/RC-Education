@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.RC-Education</groupId>
+	<artifactId>RC-Education</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>RC-Education</name>
+
+	<modules>
+		<module>cloud-config-server</module>
+		<module>eureka-server</module>
+		<module>gestionentites</module>
+		<module>microservice-users</module>
+		<module>zuul-server</module>
+	</modules>
+
+
+</project>
