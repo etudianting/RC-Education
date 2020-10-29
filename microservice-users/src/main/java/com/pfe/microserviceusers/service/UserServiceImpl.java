@@ -64,6 +64,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public long countByUsername(String username) {
+        return userRepository.countByUsername(username);
+    }
+
+
+    @Override
     public void addRoleToUser(String username, RoleName roleName) {
         User user=userRepository.findByUsernameOrEmailIgnoreCase(username,username);
         user.setRole(roleName);

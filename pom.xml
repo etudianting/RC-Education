@@ -20,5 +20,5 @@
 		<module>zuul-server</module>
 	</modules>
 
-
+<build>  <finalName>RC-Education</finalName>  </build>
 </project>

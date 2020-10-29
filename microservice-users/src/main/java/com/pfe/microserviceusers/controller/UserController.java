@@ -1,12 +1,8 @@
 package com.pfe.microserviceusers.controller;
 
 import com.pfe.microserviceusers.exceptions.BadRequestException;
-import com.pfe.microserviceusers.models.*;
-import com.pfe.microserviceusers.models.embedded.*;
 import com.pfe.microserviceusers.models.embedded.Photo;
 import com.pfe.microserviceusers.models.enumuration.RoleName;
-import com.pfe.microserviceusers.requests.*;
-import com.pfe.microserviceusers.service.*;
 import com.pfe.microserviceusers.models.Candidat;
 import com.pfe.microserviceusers.models.Manager;
 import com.pfe.microserviceusers.models.User;
@@ -156,6 +152,14 @@ public class UserController {
     {
         return userService.findAll(pageable);
     }
+
+    // compter le nbr de users sur mysql
+    @GetMapping("/count")
+    public long count(String name) {
+        return userService.countByUsername(name);
+    }
+
+
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable Long id)

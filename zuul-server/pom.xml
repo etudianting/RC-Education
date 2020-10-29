@@ -95,6 +95,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>zuul-server-jwt</finalName>
 	</build>
 
 </project>

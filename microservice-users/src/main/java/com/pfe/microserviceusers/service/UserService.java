@@ -6,7 +6,6 @@ import com.pfe.microserviceusers.models.embedded.Photo;
 import com.pfe.microserviceusers.models.enumuration.RoleName;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Slice;
 
 import java.util.Optional;
 
@@ -17,8 +16,8 @@ public interface UserService {
     public String encodedStringOfImage(Long id);
     public User findByUsername(String username);
     public User findByEmail(String email);
-    //public User countAllUsers();
     public User findByUsernameOrEmail(String username, String email);
+    public  long countByUsername(String name);
     public void addRoleToUser(String username, RoleName role);
     Optional<User> findById(Long id);
     Page<User> findAll(Pageable pageable);
